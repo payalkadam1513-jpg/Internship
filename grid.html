@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Grid Example </title>
+</head>
+<style>
+    .grid {
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #division {
+        height: 100px;
+        width: 100px;
+        border: 2px solid #000;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    #div1{
+        height: 100px;
+        width: 100px;
+        border: 2px solid #000;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .d1{
+        border: 1px solid #000;
+        height: 100px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .item{
+        border: 1px solid #000;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #d2{
+        border: 1px solid #000;
+        height: 50px;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+<body>
+    <div class="grid">
+        <div id="division">1</div>
+        <div id="division">2</div>
+        <div id="division">
+            <div class="div">
+                <div class="d1">3</div>
+                <div class="d1">4</div>
+            </div>
+        </div>
+        <div id="division">5</div>
+        <div id="division">
+            <div class="div">
+                <div class="row">
+                    <div class="item">6</div>
+                    <div class="item">7</div>
+                </div>
+                <div class="row">
+                    <div class="item">8</div>
+                    <div class="item">9</div>
+                </div>
+            </div>
+        </div>
+        <div id="division">10</div>
+        <div id="div1">
+            <div id="d2">11</div>
+            <div id="d2">12</div>
+        </div>
+        <div id="division">13</div>
+        <div id="division">14</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Check Armstrong Number </title>
+</head>
+
+<body>
+    <script>
+        function factorialNumber(num) {
+            if (num < 100 || num > 999) {
+                return "Please enter a 3-digit number.";
+            }
+
+            const digits = num.toString().split('').map(Number);
+            const sumOfCubes = digits.reduce((sum, digit) => sum + Math.pow(digit, 3), 0);
+
+            return sumOfCubes === num;
+        }
+
+
+        console.log(factorialNumber(153));
+        console.log(factorialNumber(370));
+        console.log(factorialNumber(123));
+
+    </script>
+
+    
+</body>
+
+</html>

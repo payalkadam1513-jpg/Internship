@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1200">
+    <title>YTC, Bus Transport</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .navbar{
+            position: sticky;
+            top: 0;
+        }
+        .navbar-brand img {
+            border-radius: 15px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 30px 2px;
+            background: linear-gradient(to right, #fef3c7, #fffde7);
+        }
+
+        .hero img {
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .services-heading {
+            text-align: center;
+            margin: 3rem 0 2rem;
+        }
+
+        .services-heading h2 {
+            font-size: 2.2rem;
+            color: #233d4d;
+            font-weight: bold;
+        }
+
+        .services-heading p {
+            color: #555;
+        }
+
+        .card-carousel {
+            display: flex;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+            scroll-behavior: smooth;
+            gap: 2rem;
+            padding: 2rem 0;
+            width: 100%;
+            position: relative;
+        }
+
+        .card-carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .card {
+            min-width: 300px;
+            max-width: 350px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+            flex-shrink: 0;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-image {
+            position: relative;
+            height: 200px;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            color: white;
+            padding: 1rem;
+        }
+
+        .card-content {
+            padding: 1rem 1.5rem;
+            background-color: #fffef0;
+        }
+
+        .card-content ul {
+            padding-left: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #fcca46;
+            color: #233d4d;
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e0ab23;
+            color: white;
+        }
+
+        footer {
+            background-color: #233d4d;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .student-pass {
+            text-align: center;
+            margin-top: 3rem;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-expand-sm" style="background-color: rgb(250, 250, 163)">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="Clg bus logo.png" alt="logo" height="80" width="80" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#Home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Routes">Routes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Safety">Safety</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#BusPass">Bus Pass</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="Home">
+        <section class="hero">
+            <h1>Safe & Reliable YTC College Transportation</h1>
+            <p>Trusted by colleges and parents</p>
+            <img src="YTC BUS.jpg" alt="College Bus" />
+        </section>
+    </section>
+
+    <section id="Routes">
+        <section class="services">
+            <div class="services-heading">
+                <h2>Our Bus Fleet</h2>
+                <p>Modern vehicles equipped with the latest safety features</p>
+            </div>
+
+            <div class="card-carousel" id="cardCarousel">
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="56 bus.jpg" alt="Satara Bus" />
+                        <div class="card-overlay">
+                            <h3>Satara City Bus</h3>
+                            <p>Bus No. 56</p>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>This bus is only for Satara city.</p>
+                        <b>Bus Stops:</b>
+                        <ul>
+                            <li>Rajwada</li>
+                            <li>Karanje Naka</li>
+                            <li>Netaji Subhash Chandra Bose Circle</li>
+                            <li>Narali Bag</li>
+                            <li>Jarandeshwar Naka</li>
+                            <li>Wadhe Phata</li>
+                        </ul>
+                        <a href="#" class="btn">View Details</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="Bus photo.jpg" alt="Pusegon Bus" />
+                        <div class="card-overlay">
+                            <h3>Pusegon Route Bus</h3>
+                            <p>Bus No. 60</p>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>This bus is for Pusegon Route.</p>
+                        <b>Bus Stops:</b>
+                        <ul>
+                            <li>Koregon</li>
+                            <li>Kumthe Phata</li>
+                            <li>Jalgon</li>
+                            <li>Pusegon</li>
+                        </ul>
+                        <a href="#" class="btn">View Details</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="mini bus.jpg" alt="Medha Bus" />
+                        <div class="card-overlay">
+                            <h3>Medha Route Bus</h3>
+                            <p>Bus No. 53</p>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>This bus is for Medha Route.</p>
+                        <b>Bus Stops:</b>
+                        <ul>
+                            <li>Rajwada</li>
+                            <li>Karanje Naka</li>
+                            <li>Netaji Subhash Chandra Bose Circle</li>
+                            <li>Narali Bag</li>
+                            <li>Kooper Colony</li>
+                        </ul>
+                        <a href="#" class="btn">View Details</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="std bus.jpg" alt="Umbraj Bus" />
+                        <div class="card-overlay">
+                            <h3>Umbraj Route Bus</h3>
+                            <p>Bus No. 65</p>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>This bus is for Umbraj Route.</p>
+                        <b>Bus Stops:</b>
+                        <ul>  
+                            <li>Rajwada</li>
+                            <li>Karanje Naka</li>
+                            <li>Netaji Subhash Chandra Bose Circle</li>
+                            <li>Narali Bag</li>
+                            <li>Kooper Colony</li>
+                        </ul> 
+                        <a href="#" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="std bus.jpg" alt="Umbraj Bus" />
+                        <div class="card-overlay">
+                            <h3>Umbraj Route Bus</h3>
+                            <p>Bus No. 65</p>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>This bus is for Umbraj Route.</p>
+                        <b>Bus Stops:</b>
+                        <ul>
+                            <li>Rajwada</li>
+                            <li>Karanje Naka</li>
+                            <li>Netaji Subhash Chandra Bose Circle</li>
+                            <li>Narali Bag</li>
+                            <li>Kooper Colony</li>
+                        </ul>
+                        <a href="#" class="btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <div class="student-pass">
+        <h2 class="mb-3" style="color: #233d4d;"> Bus Pass For Student</h2>
+    </div>
+    <section id="BusPass" class="d-flex justify-content-center align-items-center py-5">
+        <div class="bus-pass text-center shadow p-4 bg-white rounded">
+            <h2 class="mb-3" style="color: #233d4d;">Student Bus Pass</h2>
+            <img src="Profile icon.png" alt="Student Photo"
+                style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #fcca46;">
+            <p><strong>Student Name:</strong></p>
+            <p><strong>ID:</strong> </p>
+            <p><strong>Route:</strong> </p>
+            <p><strong>Bus No:</strong> </p>
+            <p><strong>Stop:</strong> </p>
+            <p class="text-success fw-bold">Valid Till:</p>
+            <a href="#" class="btn">Print Pass </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 YTC Bus Transport. All rights reserved.</p>
+    </footer>
+
+    <script>
+        window.onload = function () {
+            const carousel = document.getElementById("cardCarousel");
+
+            function centerCard(index) {
+                const card = carousel.children[index];
+                const carouselWidth = carousel.offsetWidth;
+                const cardWidth = card.offsetWidth;
+                const scrollTo = card.offsetLeft - (carouselWidth / 2 - cardWidth / 2);
+
+                carousel.scrollTo({
+                    left: scrollTo,
+                    behavior: 'smooth'
+                });
+            }
+
+
+            let currentIndex = 0;
+
+            centerCard(currentIndex);
+
+            setInterval(() => {
+
+                const firstCard = carousel.children[0];
+
+                centerCard(1);
+
+                setTimeout(() => {
+                    carousel.appendChild(firstCard);
+                    centerCard(0);
+                }, 600);
+            }, 3000);
+        };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Number of characters in a String without using length function</title>
+</head>
+
+<body>
+    <script>
+        function countCharacters(str) {
+            let count = 0;
+            while (str[count] !== undefined) {
+                count++;
+            }
+            return count;
+        }
+
+        let myString = "Payal Kadam.";
+        console.log("Number of characters:", countCharacters(myString));
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> setInterval Example </title>
+</head>
+<body>
+    <h3> Image Slider </h3>
+    <img id="img" src="nature.jpg" alt="images" height="500" width="100%">
+    
+    <script>
+        let image = ["nature.jpg", "moon.jpg", "waterfall image.jpg"];
+        let index = 0;
+
+        setInterval(newImage,3000);
+            function newImage () {
+            document.getElementById("img").src = image[index];
+            index++;
+            if (index>=image.length) {
+                index = 0;
+            }
+        }
+    </script>
+    
+</body>
+</html>

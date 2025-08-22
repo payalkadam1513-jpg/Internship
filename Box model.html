@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Box Model </title>
+    </head>
+    <style>
+      .p1,#p2,.p3{
+        border: 3px solid #000;
+      }
+      .p1{
+        height: 20px;
+        width: 30px;
+        margin: 25px;
+        padding: 30px;
+        text-align: center;
+      }
+      #p2{
+        height: 50px;
+        width: 60px;
+        margin: 15px;
+        padding: 20px;
+        text-align: right;
+      }
+      .p3{
+        height: 30px;
+        width: 40px;
+        margin: 5px;
+        padding: 10px;
+        text-align: right;
+      }
+      @media(max-width:768px){
+        .p1 p{
+          color: pink;
+          font-size: large;
+        }
+      
+        .p3{
+          background-color: aqua;
+        }
+        #p2{
+          background-color: black;
+        }
+        #p2 p{
+          color: pink;
+        }
+      }
+    </style>
+    <body>
+        <div class="p1">
+            <p>Payal</p>
+        </div>
+        <div id="p2">
+            <p>Yashoda Technical Campus </p>
+        </div>
+        <div class="p3">
+            Satara
+        </div>
+    </body>
+</html>

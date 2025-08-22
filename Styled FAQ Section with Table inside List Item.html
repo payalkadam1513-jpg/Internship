@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Styled FAQ Section with Table inside List Item
+        </title>
+    </head>
+    <style>
+        .questions{
+            border: 2px solid #000;
+            margin: 10px;
+            padding: 20px;
+        }
+        .question1{
+            border: 2px solid #000;
+            background-color: lightsteelblue;
+            margin: 10px;
+            padding: 20px;
+        }
+        .question2{
+            border: 2px solid #000;
+            background-color: lightpink;
+            margin: 10px;
+            padding: 20px;
+        }
+        .question3{
+            border: 2px solid #000;
+            background-color: lightgreen;
+            margin: 10px;
+            padding: 20px;
+        }
+    </style>
+    <body>
+        <ol class="questions">
+            <li class="question1">
+                <h4> How can I reset my password? </h4>
+                <p> To reset your password, click on "Forgot Password" on the login screen and follow the instructions sent to your email. </p>
+                <ul>
+                    <li>Check your spam folder if the email doesn't arrive.</li>
+                    <li>Use a secure password manager for stronger passwords.</li>
+                </ul>
+            </li>
+            <li class="question2">
+                <h4> Why can't I log in to my account? </h4>
+                <p> There could be multiple reasons why you're unable to log in. Refer to the table below for common issues and solutions. </p>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th> Issue </th>
+                            <th> Solution </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> Incorrect Password </td>
+                            <td> Use the password reset option to create a new password. </td>
+                        </tr>
+                        <tr>
+                            <td> Account Locked </td>
+                            <td> Wait 30 minutes or contact support to unlock your account. </td>
+                        </tr>
+                        <tr>
+                            <td> Email Not Verified </td>
+                            <td> Check your inbox for the verification email and follow the link. </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li class="question3">
+                <h4> How do I update my billing information? </h4>
+                <p> To update billing details, go to your account settings, select "Billing," and update your credit card or PayPal information. </p>
+                <ul>
+                    <li> Ensure your billing address matches the one linked to your payment method. </li>
+                    <li> Changes may take a few minutes to reflect in your account. </li>
+                </ul>
+            </li>
+        </ol>
+    </body>
+</html>

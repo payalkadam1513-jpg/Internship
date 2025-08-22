@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Uppercase on Blur</title>
+</head>
+
+<body>
+    <h2>Auto Uppercase on Blur</h2>
+
+    <input type="text" id="myInput" placeholder="Type something">
+
+    <script>
+        let inputBox = document.getElementById("myInput");
+
+        inputBox.onblur = function () {
+            inputBox.value = inputBox.value.toUpperCase();
+        };
+    </script>
+</body>
+
+</html>

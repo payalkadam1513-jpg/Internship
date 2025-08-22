@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlight Input on Focus</title>
+</head>
+
+<body>
+    <h2>Highlight Input on Focus</h2>
+
+    <input type="text" id="myInput" placeholder="Click here">
+
+    <script>
+        let inputBox = document.getElementById("myInput");
+
+        inputBox.onfocus = function () {
+            inputBox.style.border = "2px solid blue";
+        };
+
+        inputBox.onblur = function () {
+            inputBox.style.border = "";
+        };
+    </script>
+</body>
+
+</html>

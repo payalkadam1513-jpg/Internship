@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown Timer</title>
+</head>
+<body>
+  <h2>Countdown Timer</h2>
+
+  <p id="countdown">10</p>
+  <button onclick="startCountdown()">Start Countdown</button>
+
+  <script>
+    let timer; 
+    function startCountdown() {
+      let timeLeft = 10; 
+      document.getElementById("countdown").textContent = timeLeft;
+
+      clearInterval(timer); 
+
+      timer = setInterval(function() {
+        timeLeft--; 
+        document.getElementById("countdown").textContent = timeLeft;
+
+        if (timeLeft <= 0) {
+          clearInterval(timer); 
+        }
+      }, 1000); 
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Selected Option</title>
+</head>
+
+<body>
+    <h2>Select a Color</h2>
+
+    <select id="colorSelect" onchange="showColor()">
+        <option value="">--Choose a color--</option>
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+        <option value="Green">Green</option>
+    </select>
+
+    <p>You selected: <span id="selectedColor">None</span></p>
+
+    <script>
+        function showColor() {
+            let dropdown = document.getElementById("colorSelect");
+            let selected = dropdown.value;
+            document.getElementById("selectedColor").textContent = selected || "None";
+        }
+    </script>
+</body>
+
+</html>

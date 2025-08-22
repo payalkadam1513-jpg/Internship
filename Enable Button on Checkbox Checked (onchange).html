@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enable Button on Checkbox</title>
+</head>
+
+<body>
+    <h2>Enable Button on Checkbox Checked</h2>
+
+    <form>
+        <input type="checkbox" id="agree" onchange="toggleButton()"> I agree to terms.<br><br>
+        <input type="submit" id="submitBtn" value="Submit" disabled>
+    </form>
+
+    <script>
+        function toggleButton() {
+            let checkbox = document.getElementById("agree");
+            let button = document.getElementById("submitBtn");
+
+            button.disabled = !checkbox.checked; 
+        }
+    </script>
+</body>
+
+</html>

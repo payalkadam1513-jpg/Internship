@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YTC, Bus Transport</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .navbar-brand img {
+        border-radius: 20px;
+    }
+    body {
+        background-color: #f5f5f5;
+        color: #333;
+    }
+    .hero {
+        text-align: center;
+        padding: 3rem 2rem;
+        background-color: lightyellow;
+        color: black;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    .services {
+        max-width: 1200px;
+        margin: 4rem auto;
+        padding: 0 2rem;
+    }
+    .services-heading {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    .services-heading h2 {
+        font-size: 2rem;
+        color: #233d4d;
+    }
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        position: relative;
+        overflow: hidden;
+    }
+    .card {
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+    .card.active {
+        opacity: 1;
+    }
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+    .card-image {
+        position: relative;
+        height: 200px;
+    }
+    .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .card-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        color: white;
+        padding: 1rem;
+    }
+    .card-overlay h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .card-content {
+        padding: 1.5rem;
+    }
+    .card-content p {
+        color: #555;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+    }
+    .btn {
+        display: inline-block;
+        background-color: #fcca46;
+        color: #233d4d;
+        padding: 0.7rem 1.5rem;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+    .btn:hover {
+        background-color: #e8b832;
+    }
+    footer {
+        background-color: #233d4d;
+        color: white;
+        text-align: center;
+        padding: 2rem;
+        margin-top: 3rem;
+    }
+</style>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-success" style="background-color: rgb(250, 250, 163)">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="Clg bus logo.png" alt="logo" height="80" width="80"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Routes">Routes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Safety">Safety</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="hero">
+        <h1>Safe & Reliable College Transportation</h1>
+        <p>Trusted by college and parents</p>
+        <div class="col-sm-12">
+            <img src="YTC BUS.jpg" alt="image" class="img-fluid p-2" width="1500" height="500">
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="services-heading">
+            <h2>Our Bus Fleet</h2>
+            <p>Modern vehicles equipped with the latest safety features</p>
+        </div>
+
+        <div class="cards-container">
+            <div class="card active">
+                <div class="card-image">
+                    <img src="56 bus.jpg" alt="bus image">
+                    <div class="card-overlay">
+                        <h3>Satara City Bus</h3>
+                        <p>Bus No. 56</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <p>This bus is only for Satara city.</p>
+                    <p><b>Bus Stops:</b><br>
+                    <ul>
+                        <li>Rajwada</li>
+                        <li>Karanje Naka</li>
+                        <li>Netaji Subhash Chandra Bose Circle</li>
+                        <li>Narali Bag/ Kadam Bag</li>
+                        <li>Jarandeshwar Naka</li>
+                        <li>Wadhe Phata</li>
+                    </ul></p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="Bus photo.jpg" alt="bus image">
+                    <div class="card-overlay">
+                        <h3>Pusegon Route Bus</h3>
+                        <p>Bus No. 60</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <p>This bus for Pusegon Route.</p>
+                    <p><b>Bus Stops:</b><br>
+                    <ul>
+                        <li>Koregon</li>
+                        <li>Kumthe Phata</li>
+                        <li>Jalgon</li>
+                        <li>Pusegon</li>
+                    </ul></p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="mini bus.jpg" alt="bus image">
+                    <div class="card-overlay">
+                        <h3>Medha Route Bus</h3>
+                        <p>Bus No. 53</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <p>This bus is Medha Route.</p>
+                    <p><b>Bus Stops:</b><br>
+                    <ul>
+                        <li>Rajwada</li>
+                        <li>Karanje Naka</li>
+                        <li>Netaji Subhash Chandra Bose Circle</li>
+                        <li>Narali Bag/ Kadam Bag</li>
+                        <li>Kooper Colony</li>
+                    </ul></p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="std bus.jpg" alt="bus image">
+                    <div class="card-overlay">
+                        <h3>Umbraj Route Bus</h3>
+                        <p>Bus No. 65</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <p>This bus is only for Satara city.</p>
+                    <p><b>Bus Stops:</b><br>
+                    <ul>
+                        <li>Rajwada</li>
+                        <li>Karanje Naka</li>
+                        <li>Netaji Subhash Chandra Bose Circle</li>
+                        <li>Narali Bag/ Kadam Bag</li>
+                        <li>Kooper Colony</li>
+                    </ul></p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+    <script>
+        const cards = document.querySelectorAll('.card');
+        let currentIndex = 0;
+
+        function showNextCard() {
+            cards[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % cards.length;
+            cards[currentIndex].classList.add('active');
+        }
+
+        setInterval(showNextCard, 2000); // Change card every 2 seconds
+    </script>
+</body>
+</html>

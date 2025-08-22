@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Events</title>
+    
+</head>
+
+<body>
+
+    <h3 id="heading">Set Timeout Method</h3>
+    <button onclick="btn()">Click to Stop Interval</button>
+    <p id="text"></p>
+
+    <script>
+
+        const myInterval = setInterval(delay, 1000);
+
+        function delay() {
+            const text = document.getElementById('text');
+            text.innerHTML += "setInterval method <br>";
+        }
+
+        function btn() {
+            clearInterval(myInterval);
+        }
+    </script>
+</body>
+
+</html>
